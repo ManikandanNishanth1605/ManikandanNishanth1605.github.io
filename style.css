@@ -1,0 +1,334 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* :root {
+    --bg-color: rgb(10, 30, 125);
+    --second-bg-color: 
+} */
+
+body{
+    background-color: rgb(10, 30, 125);
+    color: #fff;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(4, 23, 118);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.head{
+    width: 100%;
+    padding: 20px 10%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 700;
+    color: azure;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: default;
+    opacity: 0%;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    color: azure;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 25px;
+    transition: 0.5s;
+    opacity: 0%;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.5 * var("--i"));
+}
+
+.navbar a:hover{
+    color: rgb(77, 217, 241);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10% 0;
+}
+
+.home-cont{
+    max-width: 600px;
+}
+
+.home-cont h1{
+    font-size: 50px;
+    font-weight: 800;
+    margin: -3px 0;
+}
+
+.home-cont p{
+    font-size: 16 px;
+}
+
+.home-cont h3{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.home-cont h3:nth-of-type(1){
+    margin-bottom: 30px;
+}
+
+.home-cont h3 span{
+    color: rgb(77, 217, 241);
+}
+
+.social_media a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(77, 217, 241);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(77, 217, 241);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 15px 30px 0;
+    transition: 0.3s ease;
+}
+
+.social_media a:hover{
+    background-color: rgb(77, 217, 241);
+    color: rgb(10, 30, 125);
+    box-shadow: 0 0 20px rgb(77, 217, 241);
+}
+
+.btn {
+    display: inline-block;
+    background: rgb(77, 217, 241);
+    padding: 12px 28px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn:hover{
+    box-shadow: 0 0 10px rgb(77, 217, 241);
+    border-radius: 40px;
+    background: rgb(10, 30, 125);
+    color: rgb(77, 217, 241);
+}
+
+.typed {
+    display: inline-flex;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5px solid;
+    width: 0;
+    animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+}
+
+.About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 6rem;
+}
+
+.About {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.About_txt h2 {
+    font-size: 40px;
+}
+
+.About_txt p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 15px 0 30px;
+}
+
+.About_txt span{
+    color: rgb(77, 217, 241);
+}
+
+.Experience h2{
+    font-size: 40px;
+    margin-bottom: 5rem;
+}
+
+.Experience-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.Experience-cont .exp-cont {
+    flex: 1 1 5rem;
+    background: rgb(140, 151, 205);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid rgb(10, 30, 125);
+}
+
+.exp-cont h3 {
+    font-size: 30px;
+}
+
+.exp-cont p {
+    font-size: 16px;
+    margin: 1rem 0 3rem;
+}
+
+.Contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.contact-text p {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    margin-bottom: 2rem;
+}
+
+.contact-list li {
+    margin-bottom: 30px;
+    display: block;
+}
+
+.contact-list i {
+    display: inline-block;
+    color: rgb(77, 217, 241);
+    font-size: 20px ;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-list li a:hover {
+    transform: scale(1.01) translateY(-5px);
+}
+
+.contact-form form {
+    position: relative;
+}
+
+.contact-form form input, form textarea {
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: rgb(140, 151, 205);
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.contact-form form .send {
+    display: inline-block;
+    padding: 14px 60px;
+    background: rgb(77, 217, 241);
+    border-radius: 0.5rem;
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: 1s;
+    transition: 0.3s ease;
+    box-shadow: 0 0 5px rgb(77, 217, 241);
+}
+
+.contact-form form .send:hover {
+    box-shadow: 0 0 10px rgb(77, 217, 241);
+    border-radius: 40px;
+    background: rgb(10, 30, 125);
+    color: rgb(77, 217, 241);
+}
+
+/*ANIMATIONS*/
+
+@keyframes slideRight{
+    0%{
+        transform: translatex(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translatez(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatez(0);
+        opacity: 1;
+    }
+}
+
+/*@keyframes typing {
+    from { width: 0 }
+    to { width: 76% }
+}
+
+@keyframes blinking {
+    0% {border-right-color: transparent}
+    50% {}
+    100% {border-right-color: rgb(77, 217, 241)}
+}*/
