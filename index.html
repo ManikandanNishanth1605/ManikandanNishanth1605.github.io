@@ -3,125 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Manikandan Nishanth | Scientific Computing</title>
+
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header class="header">
-        <a href="#" class="logo">MN</a>
-        <nav class="navbar">
-            <a href="#" style="--i:1;">Home</a>
-            <a href="#About" style="--i:2;">About me</a>
-            <a href="#Experience" style="--i:3;">Experience</a>
-            <a href="#Contact" style="--i:4;">Contact</a>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-cont">
-            <h1>Manikandan Nishanth</h1>
-            <h3>I'm a <span id="element"></span></h3>
-            <p>I am an active learner, who loves to learn new things
-                by doing and working on it for days and (try to) master
-                it. I would like to share my knowledge and 
-                experience to everyone. I will be updating this 
-                webpage now and then. Hope you like my portfolio.
-                Prost!
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <a href="#" class="logo">MN</a>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section id="home" class="home">
+    <div class="home-cont">
+
+        <h1>Manikandan Nishanth</h1>
+
+        <h3>Scientific Computing | Computational Mechanics</h3>
+
+        <p>
+            I am a reseach aspirant, who is interested in scientific computing, particularly 
+            finite element methods and computational fluid dynamics. 
+    I am motivated to further explore how parallel algorithms can be used to implement 
+    mathematical models efficiently.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="#Projects" class="btn">Projects</a>
+            <a href="https://drive.google.com/open?id=1KoInu6cQiIFxis1zGNf-fuKtf_rBwLhr&usp=drive_fs" class="btn" target="_blank">Resume</a>
+        </div>
+
+        <div class="social_media">
+            <a href="https://www.linkedin.com/in/manikandan-nishanth-m/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/ManikandanNishanth1605" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE IMAGE FRAME -->
+    <div class="home-right">
+        <div class="image-frame">
+        <img src="image1.png" class="active">
+        <img src="image2.png">
+        <img src="image3.png">
+        <img src="image4.png">
+        <img src="image5.png">
+        <img src="image6.png">
+        <img src="image7.png">
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section id="About" class="About">
+
+  <div class="about-container">
+
+    <!-- LEFT: IMAGE -->
+    <div class="about-image">
+      <img src="Passport.jpg" alt="Manikandan Nishanth">
+    </div>
+
+    <!-- RIGHT: TEXT -->
+    <div class="About_txt">
+
+      <h2>About <span>Me</span></h2>
+
+      <p>
+        I graduated from IIT Madras (Mechanical Engineering) in 2025.
+      </p>
+
+      <p>
+        My previous work involves developing finite element models for fracture mechanics 
+        and exploring numerical techniques for solving nonlinear coupled problems. I have also
+        implemented CFD solvers for incompressible flow using finite difference methods.
+      </p>
+
+      <p>
+        I enjoy bridging the gap between mathematical formulations and their 
+        computational realization.
+      </p>
+      
+      <p>
+        My hobbies include reading fiction, exploring new programming languages and playing tennis.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= RESEARCH WORK ================= -->
+<section id="Projects" class="Projects">
+    <h2 class="head">Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+
+            <img src="image1.png" class="project-img">
+
+            <h3>Phase-Field Modeling of Chemo-Mechanical Fracture in Battery Electrodes</h3>
+
+            <p>
+                Developed a nonlinear finite element framework to model fracture behavior in battery electrodes 
+                using a phase-field approach. The formulation accounts for chemo-mechanical coupling and 
+                evolving damage fields.
             </p>
-            <div class="social_media">
-                <a href="https://www.linkedin.com/in/manikandan-nishanth-m/ " target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/ManikandanNishanth1605" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' ></i></a>
-                <a href="https://twitter.com/im_fromnowhere" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter' ></i></a>
-            </div>
-            <a href="https://drive.google.com/open?id=12d0ARnohCvqO9wY3tPKjBzDlmhTM7-m5&usp=drive_fs" class="btn" target="_blank" rel="noopener noreferrer">My resume</a>
-            
-        </div>
-    </section>
-    <script>
-        var typed = new Typed('#element', {
-        strings: ['3D printing entusiast', 'Mechie', 'Learner.'],
-        typeSpeed: 100,
-        backSpeed: 60,
-        backDelay: 100
-        });
-    </script>
 
-    <section class="About" id="About">
-        <div class="my_img">
-
-        </div>
-        <div class="About_txt">
-            <h2>About <span>Me</span></h2>
-            <p>I am a mechanical engineering student from 
-                Indian Institute of Technology, Madras. I 
-                would like to learn new skills every month,
-                every day, every hour and every minute. As 
-                a starting point, I started from creating this
-                portfolio. Hope you will like it!
+            <p class="focus">
+                <strong>Focus:</strong> Nonlinear FEM, Phase-field methods, Coupled systems
             </p>
-            <a href="#" class="btn">See more</a>
-        </div>
-    </section>
 
-    <section class="Experience" id="Experience">
-        <h2 class="head">Experience</h2>
-        <div class="Experience-cont">
-
-            <div class="exp-cont">
-                <h3>Executive head</h3>
-                <h4>3D Printing Club</h4>
-                <p>I was leading the 3D printing club in Centre For Innovation, IIT Madras for the tenure of 2023-24.
-                    I was managing multiple projects and giving technical support to other clubs under the sphere.
-                </p>
-                <a href="#" class="btn">See more</a>
+            <div class="project-footer">
+                <button class="expand-btn" onclick="openProject('project1')">
+                View Details
+                </button>
             </div>
 
-            <div class="exp-cont">
-                <h3>Project member</h3>
-                <h4>3D Printing Club</h4>
-                <p>I was working as project member in 3D printing club where I worked in building a pellet-based 3D printer from scratch.
-                </p>
-                <a href="#" class="btn">See more</a>
+        </div>
+
+
+        <div class="project-card">
+
+            <img src="image2.png" class="project-img">
+
+            <h3>Lid-Driven Cavity Flow using Stream Function - Vorticity Formulation</h3>
+
+            <p>
+                Implemented a numerical solver for incompressible flow using the stream function–vorticity 
+                formulation. Investigated flow structures and convergence behavior across Reynolds numbers.
+            </p>
+
+            <p class="focus">
+                <strong>Focus:</strong> CFD, Finite difference methods, Numerical stability
+            </p>
+
+            <div class="project-footer">
+                <button class="expand-btn" onclick="openProject('project2')">
+                View Details
+                </button>
             </div>
 
-            <div class="exp-cont">
-                <h3>Research Associate</h3>
-                <h4>Acadecraft Inc.</h4>
-                <p>In this internship, I was offered the role of Subject Matter Expert, where I will be given a topic of mechanical engineering
-                    and asked to create a storyboard for a video explaining the same using real life examples. We were asked to explain complex topics
-                    in easiest way.
-                </p>
-                <a href="#" class="btn">See more</a>
-            </div>
         </div>
-    </section>
 
-    <section class="Contact" id="Contact">
-        <div class="contact-text">
-            <h2 class="head">My contact</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nesciunt deleniti 
-                nam expedita, eum tempora dolorum eos tempore sint, 
-                dicta porro aliquid sequi harum sapiente voluptatem aliquam obcaecati ut magni!</p>
-                <div class="contact-list">
-                    <li><i class='bx bxl-gmail'>nishanthmanikandanoffl@gmail.com</i>
-                    <li><i class='bx bx-phone' >+91 8667 365735</i>
-                </div>
-                <div class="social_media">
-                    <a href="https://www.linkedin.com/in/manikandan-nishanth-m/ " target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/ManikandanNishanth1605" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' ></i></a>
-                    <a href="https://twitter.com/im_fromnowhere" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter' ></i></a>
-                </div>
+        <div class="project-card">
+
+            <img src="image3.png" class="project-img">
+
+            <h3>Development of Numerical Solvers for fluid flow (Ongoing)</h3>
+
+            <p>
+                Building CFD solvers for transport problems, with emphasis 
+                on stability, discretization strategies, and convergence characteristics. I am seeking
+                to implement parallel algorithms for large-scale simulations in the future.
+            </p>
+
+            <p class="focus">
+                <strong>Focus:</strong> CFD, Finite volume methods, Differential equations, Parallel computing
+            </p>
+
+            <div class="project-footer">
+                <button class="expand-btn" onclick="openProject('project3')">
+                View Details
+                </button>
+            </div>
+
         </div>
-        <div class="contact-form">
-            <form action="">
-                <input type="text" placeholder="Enter your name" required>
-                <input type="email" placeholder="Enter your email" required>
-                <input type="text" placeholder="Enter your subject">
-                <textarea type="" id="" cols="40" rows="20" placeholder="Enter your query"></textarea>
-            <input type="submit" value="Submit" class="send">
-            </form>
+
+    </div>
+</section>
+
+
+<!-- ================= PROJECT OVERLAY ================= -->
+<div id="project1" class="project-overlay">
+
+  <!-- CLOSE BUTTON -->
+  <span class="close-btn" onclick="closeProject('project1')">&times;</span>
+
+  <!-- HERO IMAGE + TITLE -->
+  <div class="overlay-hero">
+    <img src="image1.png" alt="Image 1">
+    <div class="overlay-title">
+      <h2>Phase-Field Modeling of Chemo-Mechanical Fracture in Battery Electrodes</h2>
+    </div>
+  </div>
+
+  <!-- SCROLLABLE CONTENT -->
+  <div class="overlay-content">
+
+    <h3>Abstract</h3>
+    <p>
+      Solid-state batteries (SSBs) offer significant advantages over conventional lithium-ion
+    batteries, including improved safety, higher energy density, and enhanced electrochem
+    ical stability. However, mechanical degradation of solid-state electrodes due to stress
+    accumulation during lithium-ion diffusion remains a major challenge. In this work,
+    we present a computational framework to predict fracture in electrode particles under
+    coupled electro-chemo-mechanical loading conditions using a variational phase-field
+    model. The boundary flux is governed by the Butler–Volmer equation, enabling the
+    simulation of potentiodynamic conditions where current depends nonlinearly on both
+    voltage and concentration gradients. The governing equations are solved using the finite
+    element method with a monolithic Newton–Raphson scheme for chemo-mechanical
+    fields and a staggered scheme for the phase-field evolution. To validate the model’s
+    ability to capture geometry-dependent crack patterns, we simulate a circular particle
+    with elliptical notches oriented at different angles. Our results highlight the influence
+    of notch orientation and diffusion-induced stress on crack initiation and propagation.
+    This work provides key insights into the design of fracture-resistant electrode materi
+    als and serves as a foundation for developing predictive tools for battery durability in
+    solid-state systems.
+    </p>
+
+  </div>
+
+</div>
+<div id="project2" class="project-overlay">
+
+  <!-- CLOSE BUTTON -->
+  <span class="close-btn" onclick="closeProject('project2')">&times;</span>
+
+  <!-- HERO IMAGE + TITLE -->
+  <div class="overlay-hero">
+    <img src="image2.png" alt="Image 2">
+    <div class="overlay-title">
+      <h2>Lid-Driven Flow of Fluid Inside a Cavity using Vorticity-Stream Function Method</h2>
+    </div>
+  </div>
+
+  <!-- SCROLLABLE CONTENT -->
+  <div class="overlay-content">
+
+    <h3>Description</h3>
+    <p>Developed a 2D lid-driven cavity flow solver using the Finite Difference Method to simulate incompressible flow with
+vorticity-streamline function formulation, validating centerline velocity profiles against U. Ghia et al. (1982) benchmark data. Performed 
+detailed flow field analysis including streamline patterns, vorticity contours, and pressure distribution, demonstrating strong 
+agreement with benchmark results. Investigated numerical scheme limitations, highlighting the reduced stability and accuracy of central differencing at higher
+Reynolds numbers and identifying the need for higher-order upwind schemes for convection-dominated regimes.
+    </p>
+
+  </div>
+
+</div>
+<div id="project3" class="project-overlay">
+
+  <!-- CLOSE BUTTON -->
+  <span class="close-btn" onclick="closeProject('project3')">&times;</span>
+
+  <!-- HERO IMAGE + TITLE -->
+  <div class="overlay-hero">
+    <img src="image3.png" alt="Image 3">
+    <div class="overlay-title">
+      <h2>Development of Numerical Solvers for fluid flow (Ongoing)</h2>
+    </div>
+  </div>
+
+  <!-- SCROLLABLE CONTENT -->
+  <div class="overlay-content">
+
+    <h3>Description</h3>
+    <p>
+      Building CFD solvers for transport problems, with emphasis 
+    on stability, discretization strategies, and convergence characteristics. I am seeking
+    to implement parallel algorithms for large-scale simulations in the future.
+    </p>
+
+  </div>
+
+</div>
+<!-- ================= RESEARCH INTERESTS ================= -->
+<section class="interests">
+
+  <h2 class="head">Research Interests</h2>
+
+  <div class="interests-container">
+
+    <div class="interest-card">
+      <h3>Finite Element Methods</h3>
+      <p>
+        Development of numerical formulations for solving coupled and nonlinear 
+        physical systems with emphasis on stability and accuracy.
+      </p>
+    </div>
+
+    <div class="interest-card">
+      <h3>Computational Fluid Dynamics</h3>
+      <p>
+        Numerical simulation of fluid flow using discretization techniques, 
+        with focus on convection-dominated problems and flow stability.
+      </p>
+    </div>
+
+    <div class="interest-card">
+      <h3>Scientific Computing</h3>
+      <p>
+        Efficient implementation of numerical algorithms in C++ for 
+        large-scale computational problems.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+<!-- <section id="Experience" class="Experience">
+    <h2 class="head">Experience</h2>
+
+    <div class="Experience-cont">
+
+        <div class="exp-cont">
+            <h3>Executive Head</h3>
+            <h4>3D Printing Club, IIT Madras</h4>
+
+            <p>
+                Led a team managing multiple 3D printing projects and provided technical 
+                guidance across student initiatives. Oversaw prototyping workflows.
+            </p>
         </div>
-    </section>
+
+
+        <div class="exp-cont">
+            <h3>Project Member</h3>
+            <h4>3D Printing Club</h4>
+
+            <p>
+                Contributed to the development of a pellet-based 3D printer, involving 
+                mechanical design and fabrication.
+            </p>
+        </div>
+
+
+        <div class="exp-cont">
+            <h3>Research Associate</h3>
+            <h4>Acadecraft Inc.</h4>
+
+            <p>
+                Developed structured explanations for mechanical engineering concepts, 
+                focusing on simplifying complex topics through real-world interpretation.
+            </p>
+        </div>
+
+    </div>
+</section> -->
+
+
+<!-- ================= CONTACT ================= -->
+<section id="Contact" class="Contact">
+
+    <div class="contact-text">
+        <h2 class="head">Contact</h2>
+
+        <p>
+            Feel free to reach out for discussions on scientific computing, numerical methods, 
+            or potential collaborations.
+        </p>
+
+        <ul class="contact-list">
+            <li>Email: <a href="mailto:nishanthmanikandanoffl@gmail.com">nishanthmanikandanoffl@gmail.com</a></li>
+            <li>Phone: +91 8667365735</li>
+        </ul>
+
+        <div class="social_media">
+            <a href="https://www.linkedin.com/in/manikandan-nishanth-m/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/ManikandanNishanth1605" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+    </div>
+
+</section>
+
 </body>
 </html>
